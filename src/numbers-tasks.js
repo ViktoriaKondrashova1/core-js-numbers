@@ -259,16 +259,9 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
-  //   let number = 0;
-  //   for (let i = 0; i <= index; i += 1) {
-  //     for (let j = i + 1; j <= index; j += 1) {
-  //       number = i + j;
-  //       console.log(number)
-  //     }
-  //   }
-  // }
+function getFibonacciNumber(index) {
+  if (index <= 1) return index;
+  return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
 }
 
 /**
@@ -402,8 +395,8 @@ function toFixed(number, fractionDigits) {
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  return number.toPrecision(precision);
 }
 
 /**
